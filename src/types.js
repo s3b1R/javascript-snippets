@@ -1,52 +1,69 @@
 // Types in JavaScript
 
 //Number
-var na = 1
-var nb = 3.141
-// immer ein float (gleitkommazahl), JS hat keine integer.
+let na = 1
+let nb = 3.141
+let nc = Number('3.141')
+// Immer ein float (gleitkommazahl), JS hat keine integer.
 
 //String
-var sa = "hallo welt"
+let sa = 'hallo welt'
+// multiline strings via template strings möglich (siehe unten)
 
 //Boolean
-var ba = true
-
-//Date
-var da = new Date()
+let ba = true
 
 //Object
-// literal notation
-var oa = {}
-var ob = Object.create(null)
+let oa = {} // Literale Motation
+let ob = Object.create(null)
 
 //Array
-// literal notation
-var aa = []
-var ab = [na, sa, da, oa]
+let aa = []
+let ab = [na, sa, oa]
 
 //undefined
-var ua = undefined
-var ub
+let ua = undefined
+let ub
+
+//null
+let a = null
 
 
 // Einige Beispiele
+typeof ub // 'undefined'
+typeof foo // 'undefined'
+typeof undefined // 'undefined'
+typeof "" // 'string'
+typeof true // 'boolean'
+typeof null // 'object'
+typeof [] // 'object'
+Array.isArray([]) // true
+typeof {} // 'object'
+typeof new Number('1') // 'object'
+typeof Number('1') // 'number'
+// => nie `new Number` verwenden
+// Kurzum: Die Typenerkennung in JavaScript ist nicht intuitiv
 
-// Rechenoperatoren in plain text
-var nc = nb*na^2
-var nd = Math.pow(nb*na, 2)
+// Rechnen
+nb*na^2
+Math.pow(nb*na, 2)
+// JavaScript ist nicht geeignet für hoch präzise Rechenaufgaben
 
 // string concatenation via +
-var sb = sa + " lieber user"
+sa + ' lieber user'
+// template strings werden in back ticks ` definiert und können über mehrere Zeilen gehen.
+// Im String können dann Variablen eingebettet werden mit ${Variable}.
+let user = 'Welt'
+let welcome = `Hallo ${user} 
+Wie geht es dir?` // 'Hallo Welt\nWie geht es dir?'
 
-// Datums Arithmetik (Resultat millisekunden)
-var db = new Date() - da
-
-// Eigenschaften definieren
-var settings = {}
-settings.username = "alberto"
+// Objekt-Eigenschaften definieren
+let settings = {}
+settings.username = 'alberto'
+// Verschachtelte Objekte
 settings.position = {x: 12, y: 200}
 
 // Array Operationen
-aa.push("item1")
-var item1 = aa.pop()
-[5,1,3,2].sort()
+aa.push('item1')
+let item1 = aa.pop() // retourniere & entferne erstes element
+[5,1,3,2].sort() // sortiere aufsteigend, in place
