@@ -1,3 +1,4 @@
+'use strict'
 // Types in JavaScript
 
 //Number
