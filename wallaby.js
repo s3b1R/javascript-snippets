@@ -5,7 +5,7 @@ module.exports = function (wallaby) {
             "src/**/*.js"
         ],
         "tests": [
-            "src/wallaby-hack.js"
+            "wallaby-hack.js"
         ],
         "compilers": {
             'src/**/*.js': wallaby.compilers.babel()
