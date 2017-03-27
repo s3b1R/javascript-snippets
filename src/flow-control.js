@@ -2,8 +2,8 @@
 // Flow Control in JavaScript
 
 // if
-var a = 1
-var b
+let a = 1
+let b
 if (a){
     b = 2
 }else b = 0
@@ -11,12 +11,12 @@ if (a){
 b = a ? 2 : undefined
 
 // for
-for(var i = 0; i<10; i++){
+for(let i = 0; i<10; i++){
 
 }
 
 // while
-var i = 0
+let i = 0
 // kopfgesteuert
 while(i++ < 10){
 
