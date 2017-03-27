@@ -1,6 +1,6 @@
 'use strict'
 // Functions in JavaScript
-
+let a = 1, b = 2
 // function declaration
 function sum(a, b){
     return a + b
@@ -8,10 +8,11 @@ function sum(a, b){
 sum(1, 2)
 
 // function expression
-let multiply = function(a, b){
+let multiply = function dkd(a, b){
     return a * b
 }
 multiply(a, b)
+// dkd(a, b) geht nicht
 
 // rest parameter
 function sum(...b){

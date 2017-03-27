@@ -15,7 +15,7 @@ let sa = 'hallo welt'
 let ba = true
 
 //Object
-let oa = {} // Literale Motation
+let oa = {} // Literale Notation
 let ob = Object.create(null)
 
 //Array
@@ -66,5 +66,5 @@ settings.position = {x: 12, y: 200}
 
 // Array Operationen
 aa.push('item1')
-let item1 = aa.pop() // retourniere & entferne erstes element
+let item1 = aa.pop(); // retourniere & entferne erstes element
 [5,1,3,2].sort() // sortiere aufsteigend, in place
