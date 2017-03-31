@@ -22,6 +22,7 @@ let ob = Object.create(null)
 let aa = []
 let ab = [na, sa, oa]
 
+
 //undefined
 let ua = undefined
 let ub
@@ -36,7 +37,7 @@ typeof foo // 'undefined'
 typeof undefined // 'undefined'
 typeof "" // 'string'
 typeof true // 'boolean'
-typeof null // 'object'
+typeof null; // 'object'
 typeof [] // 'object'
 Array.isArray([]) // true
 typeof {} // 'object'
@@ -55,7 +56,7 @@ sa + ' lieber user'
 // template strings werden in back ticks ` definiert und können über mehrere Zeilen gehen.
 // Im String können dann Variablen eingebettet werden mit ${Variable}.
 let user = 'Welt'
-let welcome = `Hallo ${user} 
+let welcome = `Hallo ${user}
 Wie geht es dir?` // 'Hallo Welt\nWie geht es dir?'
 
 // Objekt-Eigenschaften definieren
@@ -65,6 +66,7 @@ settings.username = 'alberto'
 settings.position = {x: 12, y: 200}
 
 // Array Operationen
-aa.push('item1')
-let item1 = aa.pop(); // retourniere & entferne erstes element
-[5,1,3,2].sort() // sortiere aufsteigend, in place
+aa.push('ejeje')
+let item1 = aa.pop(); // retourniere & entferne letztes element
+let arr = [5,1,3,2]
+let aj = arr.pop() // sortiere aufsteigend, in place
