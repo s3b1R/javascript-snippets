@@ -62,6 +62,14 @@ log.apply(1, ['hi'])
 let scopeWith1 = log.bind(1)
 scopeWith1('hi')
 
+// arrow functions
+let summ = (a, b) => a + b
+let decoratedSumm = (a, b) => {
+    log(a, b)
+    return summ(a, b)
+}
+decoratedSumm(1,2)
+
 // hoisting
 function hoisting(){
     console.log(a, b, f(), inner()) // undefined
