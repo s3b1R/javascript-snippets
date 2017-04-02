@@ -12,3 +12,11 @@ addTo10(20)
 function addTo10(b){
     return add(10, b)
 }
+
+// 2
+function add(a, b, logger){
+    logger(`add(${[...arguments].slice(0, arguments.length-1).join(', ')})`)
+    return a + b
+}
+add(1, 2, alert)
+add(23, 549, (log)=>console.log(log))
