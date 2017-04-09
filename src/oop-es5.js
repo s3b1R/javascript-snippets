@@ -17,6 +17,7 @@ function Auto(brand){
     this.brand = brand
 
     // erstelle für jedes auto ein neues funktionsobjekt
+    // => memory leak
     this.drive = function(distance){
         this.distance += distance
     }
