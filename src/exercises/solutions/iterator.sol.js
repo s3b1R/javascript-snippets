@@ -1,4 +1,5 @@
 'use strict'
+// 1
 // Variante 1
 function ReverseIterator(arr){
     this[Symbol.iterator] = ()=>{
@@ -29,3 +30,15 @@ ReverseIterator.create = (arr)=>{
 for(let x of ReverseIterator.create([1,2,3])){
     console.log(x)
 }
+
+// 2
+function forFun(iteratable, forEach){
+    let it = iteratable[Symbol.iterator](),
+        item,
+        idx = 0
+    while((item = it.next()).done == false){
+        forEach(item.value, idx++)
+    }
+}
+
+forFun(new ReverseIterator([1,2,3]), console.log)
