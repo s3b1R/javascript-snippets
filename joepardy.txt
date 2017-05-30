@@ -36,9 +36,9 @@ Funktionen
         - Wie rufe ich eine Funktion mit einem gewünschten this-Kontext und gewünschten Argumenten auf?
             fn.call(desiredThis, arg1, arg2)
             fn.apply(desiredThis, [arg1, arg2])
-        - Was ist this im strict mode, wenn Funktion ohne new augerufen wird
+        - Was ist this im strict mode, wenn Funktion ohne new augerufen wird?
             console.log(this) => undefined
-        - Was ist this im strict mode, wenn Funktion mit new aufgerufen wird
+        - Was ist this im strict mode, wenn Funktion mit new aufgerufen wird?
             console.log(this) => {}
         - Was ist this im none-strict mode, wenn Funktion (definiert im globalen Scope) ohne new auferufen wird?
             console.log(this) => "global"
@@ -84,8 +84,8 @@ Operatoren (> < = == . () etc)
             a === undefined
         - Wie überprüfe ich ob ein Wert null ist?
             a === null
-        - Wie extrahiere ich eine verschachtelte Eigenschaft aus einem Objekt?
-            a = config && config.api && config.api.repositories
+        - Wie extrahiere ich eine verschachtelte Eigenschaft aus einem Objekt, ohne einen Fehler zu riskieren?
+            a = (config && config.api && config.api.repositories) || []
         - Wie werfe ich einen Fehler, wenn a() nicht truethy ist?
             done() || throw new Error('Fehlermeldung')
         - Wie kann ich ein Default-Fallback-Wert einer Variable zuweisen, wenn eine andere nicht gesetzt ist?
