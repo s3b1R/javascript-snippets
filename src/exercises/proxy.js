@@ -2,6 +2,29 @@
 
 const l = console.log
 
+class EntryMethodProxy {
+    get(target, propertyKey) {
+        let propertyValue = target[propertyKey]
+        let proxy = this
+        if(typeof propertyValue != 'function'){
+            return proxy.propertyProxy(propertyValue, target, propertyKey)
+        }else{
+            return function(...args){
+                return proxy.functionProxy(propertyValue, target, args)
+            }
+        }
+    }
+    // default implementation für funktion proxy
+    functionProxy(fn, target, args){
+        l('proxying', fn.name)
+        return fn.apply(target, args)
+    }
+    // default implementation für property proxy
+    propertyProxy(value, target, propertyKey){
+        l('proxying', propertyKey)
+        return value
+    }
+};
 
 class Database{
     constructor(user){
