@@ -60,39 +60,3 @@ const obj = { doit2: () => console.log, pi: 3.14159 };
 const proxiedObj = new Proxy(obj, new EntryMethodProxy());
 proxiedObj.doit2('abc')
 proxiedObj.pi
-
-
-
-l('--------Database Access---------')
-
-
-
-class Database{
-    constructor(user){
-        this.user = user
-    }
-    read(){}
-    write(){}
-}
-
-class MySql extends Database{
-    read(){ l('read mysql') }
-    write(){ l('write mysql') }
-}
-
-class DBAccessProxy extends EntryMethodProxy{
-    functionProxy(fn, target, args){
-        if(fn.name === 'write'){
-            if(target.user !== 'admin'){
-                throw new Error('not authorized')
-            }
-            return super.functionProxy(fn, target, args)
-        }
-        return super.functionProxy(fn, target, args)
-    }
-}
-
-const db = new MySql('admin')
-const proxiedDb = new Proxy(db, new DBAccessProxy())
-proxiedDb.read()
-proxiedDb.write()
