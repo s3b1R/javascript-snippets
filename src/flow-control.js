@@ -6,9 +6,11 @@ let a = 1
 let b
 if (a){
     b = 2
-}else b = 0
+}else{
+    b = 0
+}
 
-b = a ? 2 : undefined
+b = a ? 2 : 0
 
 // for
 for(let i = 0; i<10; i++){

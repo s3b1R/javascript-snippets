@@ -1,7 +1,7 @@
 // functional vs imperative
 
 // 1
-// Schreibe eine Funktion die alle Zahlen in eines Arrays summiert.
+// Schreibe eine Funktion die alle Zahlen eines Arrays summiert.
 // z.B. sum([1,2,3]) => 6
 // Schreibe eine funktionale und eine imperative Variante.
 
