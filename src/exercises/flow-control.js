@@ -1,6 +1,6 @@
 // flow control
 
-/////// Bedingen / If
+/////// Bedingungen / If
 
 // 1
 // Schreibe ein Programm, welches eine Person altersgerecht begrüsst.
