@@ -2,17 +2,18 @@
 // Types in JavaScript
 
 //Number
-let na = 1
-let nb = 3.141
-let nc = Number('3.141')
-// Immer ein float (gleitkommazahl), JS hat keine integer.
+let x = 1 // Integer
+let pi = 3.141 // Float (ähnliche wie Double), eine Fliesskommazahl
+let pii = Number('3.141')
 
 //String
 let sa = 'hallo welt'
-// multiline strings via template strings möglich (siehe unten)
+let sax = a + ', wie geht es dir?'
 
 //Boolean
-let ba = true
+let either = true
+let isEven = 8 % 2 === 0
+
 
 //Object
 let oa = {} // Literale Notation
