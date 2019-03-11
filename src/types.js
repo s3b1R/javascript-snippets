@@ -49,7 +49,7 @@ let ab = [x, pi, 4]
 aa.push('ejeje')
 let item1 = aa.pop(); // retourniere & entferne letztes element
 let arr = [5,1,3,2]
-let aj = arr.pop() // sortiere aufsteigend, in place
+let aj = arr.sort()   // sortiere aufsteigend, in place
 
 
 
