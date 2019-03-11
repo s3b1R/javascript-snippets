@@ -59,12 +59,16 @@ while (i < arr.length) {
     i++
 }
 
+
+
 // 2
 let result = []
 for (let n of arr) {
     let isEven = n % 2 === 0;
     result.push(isEven)
 }
+
+
 
 // 3
 // Variante mit while & for
@@ -93,3 +97,27 @@ while (n++ < 10) {
     }
     if (isPrime) console.log(n)
 }
+
+
+
+// 4
+const phrase = "Ich weiss, dass ich nichts weiss ... !"
+const words = phrase.split(' ');
+const uppercaseWords = []
+for(let word of words){
+    uppercaseWords.push(word[0].toUpperCase() + word.substr(1))
+}
+let capitalizedPhrase = uppercaseWords.join(' ');
+console.log(capitalizedPhrase)
+
+
+
+// 5
+const plainText = "abcz"
+const shift = 1
+let cipherText = ""
+for (let charIdx = 0; charIdx < plainText.length; charIdx++) {
+    const charCode = plainText.charCodeAt(charIdx);
+    cipherText += String.fromCharCode(charCode + shift)
+}
+console.log(cipherText)

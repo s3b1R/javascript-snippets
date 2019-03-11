@@ -20,7 +20,7 @@
 /////// Schleifen / Loops
 
 // 1
-// Schreibe ein Programm, das alle Zahlen eines Arrays summiert.
+// Schreibe ein Program, das alle Zahlen eines Arrays summiert.
 // z.B. aus [1,2,3] wird 6
 // Versuche drei Variante zu schreiben, welche jeweils unterschiedliche Schlaufentypen verwenden
 
@@ -29,12 +29,16 @@
 // Das Programm ermittelt für jede Zahl ob diese Gerade ist oder nicht.
 // z.B. aus [1,2,3] wird [false, true, false]
 
+// 3 Schreibe ein Program, welches jeden ersten Buchstaben aller Wörter eines Strings in einen Grossbuchstaben umwandelt.
+// z.B. aus "Ich weiss, dass ich nichts weiss ... !" wird "Ich Weiss, Dass Ich Nichts Weiss ... !"
 
-// 3
+// 4
 // Schreibe ein Program, das alle Primzahlen zwischen 0 und 100 ausgibt
 // Versuche 2 Varianten zu schreiben, mit jeweils anderen Schlaufentypen
 
-
+// 5
+// Schreibe ein Program, das einen beliebigen Text mit Cäsar Chiffre verschlüsselt
+// z.B. aus "abcz" wird "bcd{", sofern die Verschiebung 1 ist.
 
 
 
