@@ -3,7 +3,7 @@
 /////// Bedingungen / If
 
 // 1
-// Schreibe ein Programm, welches eine Person altersgerecht begrüsst.
+// Schreibe ein Program, welches eine Person altersgerecht begrüsst.
 // Die Begrüssung soll auf der Console ausgegeben werden.
 //
 // Kinder, d.h. bis und mit 10 Jahren: Hoi <name>
@@ -19,13 +19,39 @@
 
 /////// Schleifen / Loops
 
-
 // 1
-// Schreibe ein Programm das alle Zahlen eines Arrays summiert.
+// Schreibe ein Programm, das alle Zahlen eines Arrays summiert.
 // z.B. aus [1,2,3] wird 6
 // Versuche drei Variante zu schreiben, welche jeweils unterschiedliche Schlaufentypen verwenden
 
 // 2
-// Schreibe ein Programm welches einen Array von Zahlen verarbeitet und in einen Array mit Booleans umwandelt.
+// Schreibe ein Program, welches einen Array von Zahlen verarbeitet und in einen Array mit Booleans umwandelt.
 // Das Programm ermittelt für jede Zahl ob diese Gerade ist oder nicht.
 // z.B. aus [1,2,3] wird [false, true, false]
+
+
+// 3
+// Schreibe ein Program, das alle Primzahlen zwischen 0 und 100 ausgibt
+// Versuche 2 Varianten zu schreiben, mit jeweils anderen Schlaufentypen
+
+
+
+
+
+// Warum schleifen?
+// =>
+let result = 1 + 2 + 3 + 8
+
+// =>
+const one = 1
+const two = 2
+const three = 3
+const eight = 8
+
+result = one + two + three + eight
+
+// =>
+const ns = [1,2,3,8]
+for(let n of ns){
+    result = sum + n
+}

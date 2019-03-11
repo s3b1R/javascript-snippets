@@ -8,6 +8,6 @@
 
 // 2
 // Schreibe eine Funktion die einen Array von Zahlen entgegen nimmt und einen Array mit Booleans zurückgibt.
-// Die Funktion ermittelt für jede Zahl ob diese Gerade ist oder nicht.
+// Die Funktion ermittelt für jede Zahl ob diese gerade ist oder nicht.
 // z.B. even([1,2,3]) => [false, true, false]
 // Schreibe eine funktionale und imperative Variante.
