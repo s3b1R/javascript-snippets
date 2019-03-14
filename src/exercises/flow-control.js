@@ -22,7 +22,9 @@
 // 0
 // Schreibe ein Program, welches jedes Zeichen eines Strings einzeln ausgibt, Komma getrennt.
 // z.B. aus "Pinguin" wird "P,i,n,g,u,i,n"
-// Schreibe zwei Varianten, eine ohne Schlaufen zu verwenden, eine mit einer Schlaufe.
+// Schreibe zwei Varianten:
+// - eine ohne Schlaufen zu verwenden
+// - eine mit einer Schlaufe
 
 // 1
 // Schreibe ein Program, das alle Zahlen eines Arrays summiert.
