@@ -23,6 +23,8 @@ let user = 'Du'
 let welcome = `Hallo ${user}
 Wie geht es dir?` // 'Hallo Du\nWie geht es dir?'
 
+// Länge
+let numberOfCharacters = user.length
 // Einzelne Zeichen aus einem String auslesen
 user[0] // D
 user[1] // u

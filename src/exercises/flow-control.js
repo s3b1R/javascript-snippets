@@ -41,7 +41,6 @@
 // z.B. aus "abcz" wird "bcd{", sofern die Verschiebung 1 ist.
 
 
-
 // Warum schleifen?
 // =>
 let result = 1 + 2 + 3 + 8
@@ -57,5 +56,5 @@ result = one + two + three + eight
 // =>
 const ns = [1,2,3,8]
 for(let n of ns){
-    result = sum + n
+    result = result + n
 }

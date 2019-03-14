@@ -1,4 +1,3 @@
-'use strict'
 // Flow Control in JavaScript
 
 // if
