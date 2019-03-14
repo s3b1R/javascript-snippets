@@ -36,6 +36,38 @@ console.log(resultat2)
 
 /////////////////////////// Schleifen / Loops
 
+// 0
+const word = "Pinguin"
+// Variante 1
+console.log(`${word[0]},${word[1]},${word[2]},${word[3]},${word[4]},${word[5]},${word[6]}`)
+
+// Variante 2
+csv = ""
+for (let c of word) {
+    if (csv === '') {
+        csv += c
+    } else {
+        csv += "," + c
+    }
+}
+console.log(csv)
+
+// Variante 3
+csv = ""
+for (let c of word) {
+    csv += (csv.length > 0 ? "," : "") + c
+}
+console.log(csv)
+
+// Variante 4
+csv = ""
+for (let i = 0; i < word.length; i++) {
+    csv += (csv.length > 0 ? "," : "") + word[i]
+}
+console.log(csv)
+
+
+
 const arr = [1, 2, 3]
 // 1
 // for of
@@ -104,7 +136,7 @@ while (n++ < 10) {
 const phrase = "Ich weiss, dass ich nichts weiss ... !"
 const words = phrase.split(' ');
 const uppercaseWords = []
-for(let word of words){
+for (let word of words) {
     uppercaseWords.push(word[0].toUpperCase() + word.substr(1))
 }
 let capitalizedPhrase = uppercaseWords.join(' ');

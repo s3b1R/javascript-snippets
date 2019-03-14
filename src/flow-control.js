@@ -11,10 +11,22 @@ if (a){
 
 b = a ? 2 : 0
 
+
+
 // for
 for(let i = 0; i<10; i++){
 
 }
+
+// for of
+// Inhalte durchlaufen
+// z.B. jedes Zeichen eines Strings einzeln
+for(let char of "Pinguin"){
+    console.log(char)
+}
+
+
+
 
 // while
 let i = 0
@@ -22,10 +34,13 @@ let i = 0
 while(i++ < 10){
 
 }
+
 // fussgesteuert
 do{
 
 }while(i++ < 10)
+
+
 
 // switch case
 switch(a){
@@ -36,12 +51,16 @@ switch(a){
         throw new Error('unhandled case')
 }
 
+
+
+
 // try catch
 try{
     throw new Error('error here')
 }catch(e){ // catch erwischt immer alles, egal was throwed wurde
     console.log(e)
 }
+
 // alles kann geworfen werden
 throw 1
 throw ['any', 3.14]

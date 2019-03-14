@@ -1,4 +1,3 @@
-'use strict'
 // == vs ===
 
 // equality
@@ -15,8 +14,10 @@ a = new Boolean(false) == false
 // logical
 // evaluiere solange bis erster true => weisse den zu
 a = 0 || 200 || alert('hi')
+
 // evaluiere solange bis erster false ist => weisse den zu
 a = 200 && 0 && alert('hi')
+
 // teste ersten OR operand
     // teste obj => truethy
     // teste obj.opt1 truethy

@@ -15,16 +15,13 @@ it = Math.pow(x*pi, 2)
 
 //String
 let sa = 'hallo welt'
+
 // string concatenation via +
 let sax = a + ', wie geht es dir?'
-// template strings werden in back ticks ` definiert und können über mehrere Zeilen gehen.
-// Im String können dann Variablen eingebettet werden mit ${Variable}.
-let user = 'Du'
-let welcome = `Hallo ${user}
-Wie geht es dir?` // 'Hallo Du\nWie geht es dir?'
 
 // Länge
 let numberOfCharacters = user.length
+
 // Einzelne Zeichen aus einem String auslesen
 user[0] // D
 user[1] // u
@@ -34,6 +31,12 @@ user.charCodeAt(0) // 68
 
 // Zeichenkette aufteilen
 let words = sa.split(' ') // Array mit Elementen "hallo" und "welt"
+
+// template strings werden in back ticks ` definiert und können über mehrere Zeilen gehen.
+// Im String können dann Variablen eingebettet werden mit ${Variable}.
+let user = 'Du'
+let welcome = `Hallo ${user},
+Wie geht es dir?` // 'Hallo Du\nWie geht es dir?'
 
 
 
