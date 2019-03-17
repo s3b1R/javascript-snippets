@@ -9,10 +9,19 @@ if (a){
     b = 0
 }
 
-
-
 // ternary if
 let x = (0 > 1) ? "ja" : "nein"
+
+
+// Logische Verknüpfungen
+// && AND
+let age = 10
+let sex = 'm'
+let canEnter = age >= 18 && sex === 'f'
+
+// || OR
+let canApply = age >= 18 && (sex === 'f' || sex === 'm')
+
 
 
 

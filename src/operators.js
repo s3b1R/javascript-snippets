@@ -18,6 +18,13 @@ a = 0 || 200 || alert('hi')
 // evaluiere solange bis erster false ist => weisse den zu
 a = 200 && 0 && alert('hi')
 
+// example:
+let age = 10
+let sex = 'm'
+let canEnter = age >= 18 && sex === 'f'
+let answer = (canEnter && 'enter') || 'stay away'
+
+
 // teste ersten OR operand
     // teste obj => truethy
     // teste obj.opt1 truethy
