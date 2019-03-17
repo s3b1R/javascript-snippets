@@ -35,16 +35,14 @@ const resultat2 = greeting + " " + name
 console.log(resultat2)
 
 
-
 /////////////////////////// Schleifen / Loops
-
 
 
 // 0
 const word = "Pinguin"
 // Variante 1
 // mit String Concatenation
-console.log(word[0]+","+word[1]+","+word[2]+","+word[3]+","+word[4]+","+word[5]+","+word[6])
+console.log(word[0] + "," + word[1] + "," + word[2] + "," + word[3] + "," + word[4] + "," + word[5] + "," + word[6])
 // mit Template Strings
 console.log(`${word[0]},${word[1]},${word[2]},${word[3]},${word[4]},${word[5]},${word[6]}`)
 
@@ -65,7 +63,7 @@ for (let c of word) {
 console.log(csv)
 
 // Schritt 3: Beim ersten Durchlauf das Komma weglassen
-csv =""
+csv = ""
 for (let c of word) {
     if (csv === '') {
         csv += c
@@ -93,7 +91,6 @@ for (let i = 0; i < word.length; i++) {
 console.log(csv)
 
 
-
 // 1
 const arr = [1, 2, 3]
 // for of
@@ -118,7 +115,6 @@ while (i < arr.length) {
 }
 
 
-
 // 2
 let result = []
 for (let n of arr) {
@@ -127,22 +123,20 @@ for (let n of arr) {
 }
 
 
-
 // 3
 const phrase = "Ich weiss, dass ich nichts weiss ... !"
 
 // Variante 2
 // for
 let capitalizedPhrase = ""
-doCapitalize = false
-for(let i = 0; i < phrase.length; i++){
+for (let i = 0; i < phrase.length; i++) {
     let char = phrase[i]
-    if(i === 0){
+    if (i === 0) {
         char = char.toUpperCase()
     }
-    if(char === " "){
+    if (char === " ") {
         capitalizedPhrase += " " + phrase[++i].toUpperCase()
-    }else{
+    } else {
         capitalizedPhrase += char
     }
 }
@@ -186,7 +180,6 @@ while (n++ < 10) {
     }
     if (isPrime) console.log(n)
 }
-
 
 
 // 5
