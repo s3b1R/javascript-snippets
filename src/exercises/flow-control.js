@@ -36,7 +36,8 @@
 // Das Programm ermittelt für jede Zahl ob diese Gerade ist oder nicht.
 // z.B. aus [1,2,3] wird [false, true, false]
 
-// 3 Schreibe ein Program, welches jeden ersten Buchstaben aller Wörter eines Strings in einen Grossbuchstaben umwandelt.
+// 3
+// Schreibe ein Program, welches jeden ersten Buchstaben aller Wörter eines Strings in einen Grossbuchstaben umwandelt.
 // z.B. aus "Ich weiss, dass ich nichts weiss ... !" wird "Ich Weiss, Dass Ich Nichts Weiss ... !"
 
 // 4

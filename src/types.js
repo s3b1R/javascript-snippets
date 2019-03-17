@@ -1,4 +1,3 @@
-'use strict'
 // Types in JavaScript
 
 //Number
@@ -11,26 +10,40 @@ let it = (x*pi)**2
 it = Math.pow(x*pi, 2)
 // JavaScript ist nicht geeignet für hoch präzise Rechenaufgaben
 
+// increment, d.h.  "plus 1"
+x = x + 1
+x += 1
+x++ // evaluate than increment
+++x // increment than evaluate
+
 
 
 //String
-let sa = 'hallo welt'
+let sa = 'hallo wasdfölkajsfdgelt'
 
 // string concatenation via +
-let sax = a + ', wie geht es dir?'
+let sax = sa + ', wie geht es dir?'
 
 // Länge
-let numberOfCharacters = user.length
+let numberOfCharacters = sa.length
+numberOfCharacters
 
 // Einzelne Zeichen aus einem String auslesen
-user[0] // D
-user[1] // u
+sa[0] // h
+sa[1] // a
+sa[sa.length - 1]
+
 
 // ASCII Wert eines Zeichens ermitteln
-user.charCodeAt(0) // 68
+sa.charCodeAt(1) // 68
+
 
 // Zeichenkette aufteilen
 let words = sa.split(' ') // Array mit Elementen "hallo" und "welt"
+
+
+
+
 
 // template strings werden in back ticks ` definiert und können über mehrere Zeilen gehen.
 // Im String können dann Variablen eingebettet werden mit ${Variable}.

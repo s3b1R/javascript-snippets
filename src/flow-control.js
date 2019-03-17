@@ -9,21 +9,37 @@ if (a){
     b = 0
 }
 
-b = a ? 2 : 0
+
+
+// ternary if
+let x = (0 > 1) ? "ja" : "nein"
+
 
 
 
 // for
-for(let i = 0; i<10; i++){
-
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+    // i++
 }
+
+
+
+
 
 // for of
 // Inhalte durchlaufen
 // z.B. jedes Zeichen eines Strings einzeln
+let result = ""
 for(let char of "Pinguin"){
     console.log(char)
+    result = char
 }
+result
+
+
+
+
 
 
 
@@ -31,9 +47,14 @@ for(let char of "Pinguin"){
 // while
 let i = 0
 // kopfgesteuert
+// i++ => evaluate than calculate
+// ++i => calculate than evaluate
 while(i++ < 10){
-
+  console.log(i)
 }
+
+
+
 
 // fussgesteuert
 do{

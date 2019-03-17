@@ -20,6 +20,7 @@ else
 const resultat1 = greeting + " " + name
 console.log(resultat1)
 
+
 // Variante 2
 if (age <= 10)
     greeting = "Hoi"
@@ -34,15 +35,37 @@ const resultat2 = greeting + " " + name
 console.log(resultat2)
 
 
+
 /////////////////////////// Schleifen / Loops
+
+
 
 // 0
 const word = "Pinguin"
 // Variante 1
+// mit String Concatenation
+console.log(word[0]+","+word[1]+","+word[2]+","+word[3]+","+word[4]+","+word[5]+","+word[6])
+// mit Template Strings
 console.log(`${word[0]},${word[1]},${word[2]},${word[3]},${word[4]},${word[5]},${word[6]}`)
+
 
 // Variante 2
 csv = ""
+// Schritt 1: Buchstabe für Buchstabe kopieren, ohne Komma
+for (let c of word) {
+    csv += c
+}
+console.log(csv)
+
+// Schritt 2: Kommma hinzufügen
+csv = ""
+for (let c of word) {
+    csv += "," + c
+}
+console.log(csv)
+
+// Schritt 3: Beim ersten Durchlauf das Komma weglassen
+csv =""
 for (let c of word) {
     if (csv === '') {
         csv += c
@@ -52,12 +75,15 @@ for (let c of word) {
 }
 console.log(csv)
 
+
 // Variante 3
+// Ternary if und length Prüfung
 csv = ""
 for (let c of word) {
     csv += (csv.length > 0 ? "," : "") + c
 }
 console.log(csv)
+
 
 // Variante 4
 csv = ""
@@ -68,8 +94,8 @@ console.log(csv)
 
 
 
-const arr = [1, 2, 3]
 // 1
+const arr = [1, 2, 3]
 // for of
 const array = [1, 2, 3]
 let sum = 0
@@ -103,6 +129,37 @@ for (let n of arr) {
 
 
 // 3
+const phrase = "Ich weiss, dass ich nichts weiss ... !"
+
+// Variante 2
+// for
+let capitalizedPhrase = ""
+doCapitalize = false
+for(let i = 0; i < phrase.length; i++){
+    let char = phrase[i]
+    if(i === 0){
+        char = char.toUpperCase()
+    }
+    if(char === " "){
+        capitalizedPhrase += " " + phrase[++i].toUpperCase()
+    }else{
+        capitalizedPhrase += char
+    }
+}
+console.log(capitalizedPhrase)
+
+// Variante 1
+// for of + array
+const words = phrase.split(' ');
+const uppercaseWords = []
+for (let word of words) {
+    uppercaseWords.push(word[0].toUpperCase() + word.substr(1))
+}
+capitalizedPhrase = uppercaseWords.join(' ');
+console.log(capitalizedPhrase)
+
+
+// 4
 // Variante mit while & for
 let n = 0
 while (n++ < 10) {
@@ -129,18 +186,6 @@ while (n++ < 10) {
     }
     if (isPrime) console.log(n)
 }
-
-
-
-// 4
-const phrase = "Ich weiss, dass ich nichts weiss ... !"
-const words = phrase.split(' ');
-const uppercaseWords = []
-for (let word of words) {
-    uppercaseWords.push(word[0].toUpperCase() + word.substr(1))
-}
-let capitalizedPhrase = uppercaseWords.join(' ');
-console.log(capitalizedPhrase)
 
 
 
