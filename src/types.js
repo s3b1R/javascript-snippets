@@ -100,7 +100,7 @@ settings.position = {x: 12, y: 200}
 typeof ub // 'undefined'
 typeof foo // 'undefined'
 typeof undefined // 'undefined'
-typeof "" // 'string'
+typeof '' // 'string'
 typeof true // 'boolean'
 typeof null; // 'object'
 typeof [] // 'object'
