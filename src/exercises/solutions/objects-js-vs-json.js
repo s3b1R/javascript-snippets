@@ -46,7 +46,18 @@ const json = JSON.stringify(topScore)
 console.log(json)
 
 
+
 // 3
+const mappedAndSorted = users
+    .map(user => ({
+        content: user.name,
+        length: user.name.length
+    }))
+    .sort((a, b) => a.length - b.length)
+
+
+
+// 4
 function cell(content, colMaxWidth, filler = ' ', align = 'left'){
     let stringContent = content.toString();
     const minWidth = stringContent.length;
@@ -74,16 +85,15 @@ function headerRow(nameColWidth, scoreColWidth){
     return '|'+nameLabel+'|'+scoreLabel+'|\n'+'|'+nameSpacer+'|'+scoreSpacer+'|';
 }
 
-function maxUsernameLength(users){
-    return users.map(user => user.name.length).sort((a, b) => a - b).pop()
+function maxLength(arr, prop){
+    return arr
+        .map(item => item[prop].toString().length)
+            .sort((a, b) => a - b)
+            .pop()
 }
 
-function maxScoreLength(users){
-    return users.map(user => user.score.toString().length).sort((a, b) => a - b).pop()
-}
-
-const nameColWidth = Math.max('Name'.length, maxUsernameLength(users));
-const scoreColWith = Math.max('Score'.length, maxScoreLength(users));
+const nameColWidth = Math.max('Name'.length, maxLength(users, 'name'));
+const scoreColWith = Math.max('Score'.length, maxLength(users, 'score'));
 users.sort((a, b) => b.score - a.score)
 const list = [
     headerRow(nameColWidth, scoreColWith),
