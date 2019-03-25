@@ -24,6 +24,7 @@ Object.defineProperty(obj, 'rootProperty', {
 })
 
 obj.add = function(item){
+    // this ist eine Referenz auf obj
     this.items.push(item)
 }
 
