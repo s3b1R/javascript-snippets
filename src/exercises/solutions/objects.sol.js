@@ -51,8 +51,10 @@ let rows = []
 rows.push('|Name|Punkte|')
 rows.push('|----|------|')
 
-for(let user of users){
-    rows.push(['', user.name, user.score, ''].join('|'))
+for(const user of users){
+    const userCells = ['', user.name, user.score, ''];
+    const userRow = userCells.join('|');
+    rows.push(userRow)
 }
 list = rows.join('\n')
 console.log(list)
@@ -75,11 +77,29 @@ maxScoreLength
 rows = []
 maxNameLength = Math.max('Name'.length, maxNameLength)
 maxScoreLength = Math.max('Punkte'.length, maxScoreLength)
-rows.push(['', 'Name'.padEnd(maxNameLength), 'Punkte'.padEnd(maxScoreLength), ''].join('|'))
-rows.push(['', '-'.repeat(maxNameLength),    '-'.repeat(maxScoreLength),      ''].join('|'))
 
-for(let user of users){
-    rows.push(['', user.name.padEnd(maxNameLength), user.score.toString().padEnd(maxScoreLength), ''].join('|'))
+const paddedNameHeader = 'Name'.padEnd(maxNameLength)
+const paddedScoreHeader = 'Punkte'.padEnd(maxScoreLength)
+
+const nameBorder = '-'.repeat(maxNameLength);
+const scoreBorder = '-'.repeat(maxScoreLength);
+
+let headerCells = ['', paddedNameHeader, paddedScoreHeader, ''];
+let borderCells = ['', nameBorder,       scoreBorder,       ''];
+
+let headerRow = headerCells.join('|');
+let borderRow = borderCells.join('|');
+
+rows.push(headerRow)
+rows.push(borderRow)
+
+for(const user of users){
+    const paddedName = user.name.padEnd(maxNameLength)
+    const paddedScore = user.score.toString().padEnd(maxScoreLength)
+    const userCells = ['', paddedName, paddedScore, '']
+    const userRow = userCells.join('|')
+
+    rows.push(userRow)
 }
 
 list = rows.join('\n')
