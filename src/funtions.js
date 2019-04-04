@@ -88,5 +88,5 @@ function hoisting(){
     // fehler2: f ist keine funktion
     a = 1
     let b = 2
-    f = inner()
+    f = inner
 }
