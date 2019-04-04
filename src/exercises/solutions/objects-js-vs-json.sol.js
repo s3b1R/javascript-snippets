@@ -1,18 +1,22 @@
 let users = [
     {
-        name: 'Alex #1',
+        name: 'Alex Honold',
+        nickname: 'Alex #1',
         score: 12
     },
     {
         name: 'Donnie Darko',
+        nickname: 'DJ Terrible',
         score: 3
     },
     {
         name: 'Tim Strub',
+        nickname: 'Stubi',
         score: 10
     },
     {
         name: 'Ali Bengali',
+        nickname: 'AliG',
         score: 2
     }
 ]
@@ -58,46 +62,120 @@ const mappedAndSorted = users
 
 
 // 4
-function cell(content, colMaxWidth, filler = ' ', align = 'left'){
-    let stringContent = content.toString();
-    const minWidth = stringContent.length;
-    const colWidth = Math.max(minWidth, colMaxWidth)
-    const fillCount = colWidth - minWidth;
+function asciiTable4(){
+    function cell(content, colMaxWidth, filler = ' ', align = 'left'){
+        let stringContent = content.toString();
 
-    if(align === 'left'){
-        return stringContent + filler.repeat(fillCount)
-    }else if (align === 'right'){
-        return filler.repeat(fillCount) + stringContent
+        if(align === 'left'){
+            return stringContent.padEnd(colMaxWidth, filler)
+        }else if (align === 'right'){
+            return stringContent.padStart(colMaxWidth, filler)
+        }
     }
+
+    function row(...cells){
+        return ['', ...cells, ''].join('|')
+    }
+
+    function userRow(user, nameColWidth, scoreColWidth){
+        const userCell = cell(user.name, nameColWidth);
+        const scoreCell = cell(user.score, scoreColWidth, ' ', 'right');
+        return row(userCell, scoreCell);
+    }
+
+    function headerRows(nameColWidth, scoreColWidth){
+        const nameLabel = cell('Name', nameColWidth)
+        const nameSpacer = cell('', nameColWidth, '-')
+
+        const scoreLabel = cell('Score', scoreColWidth)
+        const scoreSpacer = cell('', scoreColWidth, '-')
+
+        return [row(nameLabel, scoreLabel), row(nameSpacer, scoreSpacer)];
+    }
+
+    function maxLength(arr, prop){
+        return arr
+            .map(item => item[prop].toString().length)
+                .sort((a, b) => a - b)
+                .pop()
+    }
+
+    const nameColWidth = Math.max('Name'.length, maxLength(users, 'name'));
+    const scoreColWith = Math.max('Score'.length, maxLength(users, 'score'));
+    users.sort((a, b) => b.score - a.score)
+    const list = [
+            ...headerRows(nameColWidth, scoreColWith),
+            ...users.map(user => userRow(user, nameColWidth, scoreColWith))
+        ]
+        .join('\n');
+
+    console.log(list)
 }
+asciiTable4()
 
-function userRow(user, nameColWidth, scoreColWidth){
-    return '|'+cell(user.name, nameColWidth)+'|'+cell(user.score, scoreColWidth, ' ', 'right')+'|';
-}
 
-function headerRow(nameColWidth, scoreColWidth){
-    const nameLabel = cell('Name', nameColWidth)
-    const nameSpacer = cell('', nameColWidth, '-')
 
-    const scoreLabel = cell('Score', scoreColWidth)
-    const scoreSpacer = cell('', scoreColWidth, '-')
+// 5
+function asciiTable5(){
+    function cell(content, colMaxWidth, filler = ' ', align = 'left'){
+        let stringContent = content.toString();
 
-    return '|'+nameLabel+'|'+scoreLabel+'|\n'+'|'+nameSpacer+'|'+scoreSpacer+'|';
-}
+        if(align === 'left'){
+            return stringContent.padEnd(colMaxWidth, filler)
+        }else if (align === 'right'){
+            return stringContent.padStart(colMaxWidth, filler)
+        }
+    }
 
-function maxLength(arr, prop){
-    return arr
-        .map(item => item[prop].toString().length)
+    function row(...cells){
+        return ['', ...cells, ''].join('|')
+    }
+
+    function findMaxLength(arr, prop){
+        return arr
+            .map(item => item[prop].toString().length)
             .sort((a, b) => a - b)
             .pop()
+    }
+
+    function headerRows(colSpecs){
+        return [
+            row(...colSpecs.map(colSpec => {
+                const capitalizedColumnHeader = colSpec.colName[0].toUpperCase() + colSpec.colName.slice(1);
+                return cell(capitalizedColumnHeader, colSpec.maxLength)
+            })),
+            row(...colSpecs.map(colSpec => {
+                return cell('', colSpec.maxLength, '-')
+            }))
+        ]
+    }
+
+    function generateAsciiTable(items = [], sortBy){
+        if(items.length === 0) return ''
+
+        items.sort((a, b) => b[sortBy] - a[sortBy])
+
+        const colSpecs = Object.getOwnPropertyNames(items[0]).map(colName => {
+            let maxLength = Math.max(colName.length, findMaxLength(items, colName))
+            return {
+                colName,
+                maxLength
+            }
+        })
+
+        return [
+            ...headerRows(colSpecs),
+            ...items.map(user => {
+                const userCells = colSpecs.map(colSpec => {
+                    const cellContent = user[colSpec.colName]
+                    const align = typeof cellContent === 'number' ? 'right' : 'left'
+                    return cell(cellContent, colSpec.maxLength, ' ', align)
+                })
+                return row(...userCells);
+            })
+            ].join('\n')
+    }
+
+    console.log(generateAsciiTable(users, 'score'));
 }
-
-const nameColWidth = Math.max('Name'.length, maxLength(users, 'name'));
-const scoreColWith = Math.max('Score'.length, maxLength(users, 'score'));
-users.sort((a, b) => b.score - a.score)
-const list = [
-    headerRow(nameColWidth, scoreColWith),
-    ...users.map(user => userRow(user, nameColWidth, scoreColWith))]
-    .join('\n');
-
-console.log(list)
+asciiTable5()
