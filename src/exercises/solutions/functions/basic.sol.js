@@ -4,10 +4,22 @@ function createGreeting(name){
     return `Hello ${name}`
 }
 
+
+
 // 1.2
+function createGreeting(name){
+    if(name === undefined){
+        name = 'Welt'
+    }
+    return `Hallo ${name}`
+}
+
+// oder
 function createGreeting(name = 'Welt'){
     return `Hallo ${name}`
 }
+
+
 
 // 1.3
 // Variante 1
