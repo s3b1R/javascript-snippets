@@ -36,18 +36,41 @@ function calcX(z){
 // Die Reihenfolge der Ergebnisse ist nicht mehr gleich, wie die der Aufrufe.
 
 // 1c
+// Variante ohne Promise.all
 let i = 0
-let promises = []
+let sum = 0
+let resultCount = 0
 while(++i <= 10){
-    promises.push(calcX(i/10)
-    .catch((e)=>{
-        console.error(e)
-        return 0
-    }))
+    calcX(i/10)
+        .then(res => {
+            sum += res
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        .then(() => {
+            resultCount++
+            if(resultCount === i-1){
+                console.log(sum)
+            }
+    })
 }
 
-Promise.all(promises)
-.then((values)=>{
-    return values.reduce((sum, value)=>sum+=value, 0)
-})
-.then(console.log)
+
+// Variante mit Promise.all
+// let i = 0
+// let promises = []
+// while(++i <= 10){
+//     promises.push(
+//         calcX(i/10)
+//         .catch((e)=>{
+//             console.error(e)
+//             return 0
+//         }))
+// }
+//
+// Promise.all(promises)
+// .then((values)=>{
+//     return values.reduce((sum, value)=>sum+=value, 0)
+// })
+// .then(console.log)
