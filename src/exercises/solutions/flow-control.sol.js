@@ -8,34 +8,93 @@ const name = "Walter"
 let greeting = ""
 
 // Variante 1
-if (age <= 10)
+if (age <= 10) {
     greeting = "Hoi"
-else if (age <= 18)
+} else if (age <= 18) {
     greeting = "Hallo"
-else if (age <= 100)
+} else if (age <= 100) {
     greeting = "Grüezi"
-else
+} else {
     greeting = "Grüss Gott"
+}
 
 const resultat1 = greeting + " " + name
 console.log(resultat1)
 
 
 // Variante 2
-if (age <= 10)
+if (age <= 10) {
     greeting = "Hoi"
-if (age > 10 && age <= 18)
+}
+if (age > 10 && age <= 18) {
     greeting = "Hallo"
-if (age > 18 && age <= 100)
+}
+if (age > 18 && age <= 100) {
     greeting = "Grüezi"
-if (age > 100)
+}
+if (age > 100) {
     greeting = "Grüss Gott"
+}
 
 const resultat2 = greeting + " " + name
 console.log(resultat2)
 
 
+// 2
+let age = 15
+let betrag = 0
+
+// Variante 1
+if (age < 5) {
+    betrag = 0
+} else if (age < 16) {
+    betrag = 5
+} else if (age >= 60) {
+    betrag = 10
+} else {
+    betrag = 15
+}
+console.log(betrag + " CHF")
+
+// Variante 2
+betrag = 15
+if (age < 5) {
+    betrag = 0
+}
+if (age >= 5 && age <= 15) {
+    betrag = 5
+}
+if (age >= 60) {
+    betrag = 10
+}
+
+
+//3
+let age = 19;
+let sex = 'w'; // geschlecht, m oder w
+let canEnter = false;
+
+// Variante 1
+switch(sex) {
+    case 'w':
+        canEnter = age >= 18;
+        break;
+    case 'm':
+        canEnter = age >= 20;
+        break;
+    default:
+        canEnter = false;
+}
+
+console.log('Kommst ich rein? ' + canEnter );
+
+// Variante 2
+canEnter = (age >= 18 && sex === 'w') || (age >= 20 && sex === 'm');
+
+
+
 /////////////////////////// Schleifen / Loops
+
 
 
 // 0
