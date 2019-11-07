@@ -41,6 +41,8 @@ console.log(resultat2)
 
 
 // 2
+
+
 let age = 15
 let betrag = 0
 
@@ -55,6 +57,18 @@ if (age < 5) {
     betrag = 15
 }
 console.log(betrag + " CHF")
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Variante 2
 betrag = 15
