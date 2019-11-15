@@ -33,3 +33,17 @@ function createGreeting(...names){
     let finalNames = names.join(', ')
     return `Hallo ${finalNames}`
 }
+// Variante 3, Default Wert pro Array-Element
+function sagHallo(dieNamen = ["Welt"]) {
+    let alleNamenKommaGetrennt = ""
+    for(let name of dieNamen){
+        if(name === undefined){
+            name = "Welt"
+        }
+        alleNamenKommaGetrennt += ", " + name
+    }
+    console.log("Hallo " + alleNamenKommaGetrennt.substr(2))
+}
+
+sagHallo(["Hans", "Thomas", undefined, "Peter"])
+sagHallo()

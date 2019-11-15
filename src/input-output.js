@@ -1,3 +1,5 @@
+/*
+// Using data event. Not reusable
 const stdin = process.openStdin()
 
 console.log("Dein Name:")
@@ -10,9 +12,11 @@ const onNameEntered = function (data) {
 }
 
 stdin.once("data", onNameEntered)
+*/
 
 
 /*
+// Using data event. Wrapped in a reusable function
 const stdin = process.openStdin()
 
 function prompt(question, handler){
@@ -30,4 +34,19 @@ let onNameEntered = function (data) {
 }
 
 prompt("Deine Name:", onNameEntered)
+*/
+
+
+/*
+// Using line event. Not reusable
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    terminal: false
+})
+
+console.log('Dein Name:')
+rl.on('line', function (line) {
+    console.log('Dein Name ist:', line);
+})
 */
