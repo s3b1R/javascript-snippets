@@ -84,3 +84,40 @@ Schreibe ein Program, das einen beliebigen Text mit Cäsar Chiffre verschlüssel
 
 z.B. aus `"abcz"` wird `"bcd{"`, sofern die Verschiebung 1 ist.
 
+
+# 6
+Gegegeben ist eine beliebige Menge von Zahlen.
+
+# 6.1
+Gebe nur die Ganzzahlen aus.
+
+# 6.2
+Gebe nur die positiven Zahlen aus.
+
+# 6.3
+Berechne die Quersumme aller Zahlen.
+
+# 6.4
+Berechne den Durchschnitt (arithmetisches Mittel) aller Zahlen.
+
+
+# 7
+Gegeben ist eine beliebige Zeichenkette.
+
+# 7.1
+Konvertiere jedes zweite Zeichen zum entsprechenden Grossbuchstaben.
+
+# 7.2
+Ersetze alle Konsonanten durch die entsprechenden Selbstlaute. \
+Zum Beispiel aus einem "p" wird "pe", aus "c" wird "ce", aus "k" wird "ka" etc.
+
+# 7.3
+Gib die Zeichenkette rückwärts aus. \
+z.B. aus "Hallo du" wird "ud ollaH".
+
+# 7.4
+Gib die Wörter der Zeichenkette rückwärts aus. \
+z.B. aus "Hallo du, wie geht es dir?" wird "dir? es geht wie du, Hallo"
+
+
+
