@@ -118,6 +118,3 @@ z.B. aus "Hallo du" wird "ud ollaH".
 #### 7.4
 Gib die Wörter der Zeichenkette rückwärts aus. \
 z.B. aus "Hallo du, wie geht es dir?" wird "dir? es geht wie du, Hallo"
-
-
-

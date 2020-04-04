@@ -26,7 +26,7 @@ multiply(...[1, 2])
 // multiply wird gleich aufgerufen wie in: multiply(1, 2)
 
 // optionale parameter
-function sayHello(to='World'){
+function sayHello(to = 'World'){
     console.log(`Hello ${to}`)
 }
 

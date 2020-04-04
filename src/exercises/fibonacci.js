@@ -1,6 +1,4 @@
 // fibonacci, imperativ
 
-// Berechne die Fibonacci Folge für n Elemente (Variabel, 0 - unendlich)
-// Gib alle berechneten Elemente aus
-
-
+// Berechne die Fibonacci Folge für n Elemente, beginnend bei 0.
+// Gib alle berechneten Elemente aus.
