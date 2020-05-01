@@ -1,4 +1,5 @@
 'use strict'
+
 class Auto{
     constructor(brand){
         this.brand = brand

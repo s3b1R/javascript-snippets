@@ -1,5 +1,4 @@
-'use strict'
-import {Person, Store} from './admin.module'
+import {Person, Store} from './admin.module.js'
 
 let p1 = new Person('Agatha', 'Kurnikova')
 
@@ -9,12 +8,13 @@ store.add(p1)
 store.add({
     name: 'Hans', vorname: 'Meier'
 })
+console.table(store.items)
 
 store.remove(p1)
 
 let pWithHa = store.findAll((p) => p.name.startsWith('Ha'))
-pWithHa
+console.log('starts with Ha:', pWithHa[0])
 
 store.remove(pWithHa.pop())
 
-store
+console.log(store.items.length)
