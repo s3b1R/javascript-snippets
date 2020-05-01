@@ -5,7 +5,7 @@ function getFormattedDate(){
     return new Date().toISOString()
 }
 
-export default class {
+export class Logger {
     constructor(writer){
         this.writer = writer
     }
