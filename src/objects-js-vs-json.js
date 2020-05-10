@@ -16,7 +16,7 @@ boo = new Boolean()
 
 // Warum kann man auf dem primitiven string '' also trotzdem Methoden wie z.B. split aufrufen?
 let chars = 'abc'.split('')
-// Weil JS zur Laufzeit primitve Typen kurzzeitig "boxed", d.h. in ein Objekt umwandelt via new String(''),
+// Weil JS zur Laufzeit primitive Typen kurzzeitig "boxed", d.h. in ein Objekt umwandelt via new String(''),
 // die Methode ausführt und dann das Objekt wieder löscht.
 // Dieses Vorgehen gibt es auch in anderen Sprachen, z.B. C# oder Java.
 
