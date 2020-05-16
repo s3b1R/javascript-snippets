@@ -10,20 +10,13 @@ for(let i=0;i<4;i++){
 }
 // let erstellt eine Variable (Binding-Context) pro Block (for definiert einen Block).
 
-for(var i=0;i<4;i++){
-    window.setTimeout(()=>{
-        var idx = i
-        window.alert(idx)
-    }, 2000)
-}
-
 // Variante 2
-[0,1,2,3,4].forEach(function(i){
-    window.setTimeout(function(){
+[0,1,2,3,4].forEach(i => {
+    window.setTimeout(() => {
         window.alert(i)
     }, 2000)
 })
-// i wird jeweils an das argument des callbacks gebunden, der ist stehts so wie er sollte.
+// i wird jeweils an das argument des callbacks gebunden. Pro callback entsteht ein neues Binding.
 
 // Variante 3
 for(var i=0;i<4;i++){
@@ -31,4 +24,4 @@ for(var i=0;i<4;i++){
         window.alert(idx)
     }.bind(null, i), 2000)
 }
-// i wird als argument gebunden zum erstellungszeitpunk der funktion. es werden im ganzen 5 funktionsobjekte erstellt.
+// i wird als argument gebunden zum erstellungszeitpunk der funktion. Es werden im ganzen 5 funktionsobjekte erstellt.

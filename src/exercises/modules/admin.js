@@ -13,7 +13,7 @@ Store(items)
   // items kann z.B. ein Array von Personen sein
   - add(item)
   - remove(item)
-  - findAll(item => boolean)
+  - findAll(item => boolean): Array<item>
   // das bedeutet: die Methode findAll erwartet als Argument eine Funktion,
                    welche als Argument ein Item entgegen nimmt und ein Boolean retourniert
 

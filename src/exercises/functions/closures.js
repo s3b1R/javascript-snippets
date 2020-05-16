@@ -1,9 +1,7 @@
 // 1
 // a. Was gibt folgender Code aus?
 
-let i
-
-for (i = 0; i < 4; i++) {
+for (var i = 0; i < 4; i++) {
   setTimeout(() => {
     console.log(i)
   }, 2000)
