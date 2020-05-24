@@ -2,7 +2,7 @@ import {Person, Store} from './admin.module.js'
 
 let p1 = new Person('Agatha', 'Kurnikova')
 
-let store = new Store([])
+let  store = new Store([])
 
 store.add(p1)
 store.add({
